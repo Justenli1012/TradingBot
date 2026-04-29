@@ -7,14 +7,18 @@ import random
 import alpaca_trade_api as tradeapi
 from groq import Groq #Can be any LLM
 
-client = Groq(api_key="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")
+#Find the following API keys from your Alpaca account dashboard, and Groq (or other LLM) insert them here
+LLM_API_KEY = ""
+LLAMA_API_KEY = ""
+LLAMA_API_SECRET_KEY = ""
+
+client = Groq(api_key=LLM_API_KEY)
+key = LLAMA_API_KEY
+secret_key = LLAMA_API_SECRET_KEY
 
 DATA_FILE = "equities.json"
 
-key = "PKPERSINOPNCY4I6MBM43FYAJH"
-secret_key = "AciQ7mc9E1raJs6maS18TKtUQYU6grAg3hLzjroYTfv8"
 BASE_URL = "https://paper-api.alpaca.markets/"
-
 api = tradeapi.REST(key, secret_key, BASE_URL, api_version="v2")
 
 def fetch_portfolio():
