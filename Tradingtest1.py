@@ -7,10 +7,13 @@ import random
 import alpaca_trade_api as tradeapi
 from groq import Groq #Can be any LLM
 
+#Alpaca: https://app.alpaca.markets/dashboard/overview
+#Grow: https://console.groq.com/keys
+
 #Find the following API keys from your Alpaca account dashboard, and Groq (or other LLM) insert them here
-LLM_API_KEY = ""
-LLAMA_API_KEY = ""
-LLAMA_API_SECRET_KEY = ""
+LLM_API_KEY = "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"
+LLAMA_API_KEY = "PKPERSINOPNCY4I6MBM43FYAJH"
+LLAMA_API_SECRET_KEY = "AciQ7mc9E1raJs6maS18TKtUQYU6grAg3hLzjroYTfv8"
 
 client = Groq(api_key=LLM_API_KEY)
 key = LLAMA_API_KEY
